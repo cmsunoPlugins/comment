@@ -1,0 +1,15 @@
+/* comment */
+.commentBloc{padding:15px 0;margin:0;border-bottom:1px solid #ccc;}
+.commentBloc ul{margin:0;padding:0;}
+.commentBloc li{list-style:none;margin:0 0 10px 0;width:100%;border-top:1px solid #ccc;padding:15px 0;}
+.commentAuthor{font-size:.9em;line-height:1.3em;}
+.commentAuthor img{float:left;margin-right:20px;}
+.commentText{overflow:hidden;}
+/* comment form */
+.commentForm{max-width:480px;width:100%;}
+.commentForm label{display:block;}
+.commentForm input,.commentBloc textarea{display:block;margin:0 0 5px;border:1px solid #bebebe;line-height:1.5em;background:#fff;font-size:.9em;font-family:georgia;font-style:italic;color:#777;padding:4px 10px;}
+.commentForm input{width:50%;}
+.commentForm textarea{width:90%;height:120px;}
+.commentSubm{font-size:16px;text-align:center;color:#fff;background:#222;width:50%;line-height:32px;text-decoration:none;cursor:pointer;border:none;padding:0;-webkit-transition:all 0.25s linear;-moz-transition:all 0.25s linear;transition:all 0.25s linear;}
+.commentSubm:hover{width:90%;}

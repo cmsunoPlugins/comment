@@ -1,0 +1,8 @@
+#commentL table{margin:5px 0 5px 20px;}
+#commentL td{border:1px solid #aaa;padding:3px 5px;}
+#commentL td.nok{padding-right:10px;color:#900;}
+#commentL td.ok{padding-right:10px;color:#0074cc;}
+#commentL td .del{text-align:center;font-weight:700;font-size:1.2em;color:red;cursor:pointer;line-height:1.5em;}
+#commentL td .view{text-align:center;font-weight:700;font-size:1.2em;color:green;cursor:pointer;line-height:1.5em;}
+#commentL td .mel{text-align:center;font-size:1.2em;color:red;line-height:1.5em;}
+#commentL td .melOk{text-align:center;font-size:1.2em;color:green;line-height:1.5em;}
