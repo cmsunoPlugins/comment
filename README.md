@@ -29,4 +29,4 @@ This plugin allows visitors to add comments in the page.
 
 ### Versions ###
 
-* 1.0 - xx/01/2016 : First stable version
+* 1.0 - 14/01/2016 : First stable version
