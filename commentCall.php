@@ -38,7 +38,7 @@ if (isset($_POST['a']))
 			}
 		if($ct>3)
 			{
-			echo '<strong>'._('You have exceeded the quota').'.</strong>';
+			echo '<strong>'.T_('You have exceeded the quota').'.</strong>';
 			exit;
 			}
 		$c = nl2br(strip_tags($_POST['t']));
@@ -57,8 +57,8 @@ if (isset($_POST['a']))
 		//
 		if(file_put_contents('../../data/'.strip_tags($_POST['u']).'/comment.json', $out))
 			{
-			echo strip_tags($_POST['t']).'<br /><strong>'._('Your comment is awaiting moderation.').'</strong>';
-			mailAdmin(_('New Comment').' : '.strip_tags($_POST['u']), strip_tags($_POST['n']).'<br />'.$c, strip_tags($_POST['u']), $bottom, $top, $sdata);
+			echo strip_tags($_POST['t']).'<br /><strong>'.T_('Your comment is awaiting moderation.').'</strong>';
+			mailAdmin(T_('New Comment').' : '.strip_tags($_POST['u']), strip_tags($_POST['n']).'<br />'.$c, strip_tags($_POST['u']), $bottom, $top, $sdata);
 			exit;
 			}
 		break;

@@ -16,11 +16,11 @@ if (isset($_POST['action']))
 		case 'plugin': ?>
 		<link rel="stylesheet" type="text/css" media="screen" href="uno/plugins/comment/comment.css" />
 		<div class="blocForm">
-			<h2><?php echo _("Comment");?></h2>
-			<p><?php echo _("This plugin allows visitors to add comments.");?></p>
-			<p><?php echo _("Just insert the code");?>&nbsp;<code>[[comment]]</code>&nbsp;<?php echo _("in the template or the page content.");?></p>
+			<h2><?php echo T_("Comment");?></h2>
+			<p><?php echo T_("This plugin allows visitors to add comments.");?></p>
+			<p><?php echo T_("Just insert the code");?>&nbsp;<code>[[comment]]</code>&nbsp;<?php echo T_("in the template or the page content.");?></p>
 			<div id="usersList">
-				<h3><?php echo _("Comments");?></h3>
+				<h3><?php echo T_("Comments");?></h3>
 				<div id="commentL"></div>
 			</div>
 			<div class="clear"></div>
@@ -56,11 +56,11 @@ if (isset($_POST['action']))
 					if($v['d'].$v['n']==$l) unset($a[$k]);
 					}
 				$out = json_encode($a);
-				if(file_put_contents('../../data/'.$Ubusy.'/comment.json', $out)) echo _('Comment deleted');
-				else echo '!'._('Error');
+				if(file_put_contents('../../data/'.$Ubusy.'/comment.json', $out)) echo T_('Comment deleted');
+				else echo '!'.T_('Error');
 				}
 			}
-		else echo '!'._('No data');
+		else echo '!'.T_('No data');
 		break;
 		// ********************************************************************************************
 		case 'ok':
@@ -76,11 +76,11 @@ if (isset($_POST['action']))
 					if($v['d'].$v['n']==$l) $a[$k]['s'] = 3; // +1 : email valided ; +2 : moderation OK
 					}
 				$out = json_encode($a);
-				if(file_put_contents('../../data/'.$Ubusy.'/comment.json', $out)) echo _('Comment valided');
-				else echo '!'._('Error');
+				if(file_put_contents('../../data/'.$Ubusy.'/comment.json', $out)) echo T_('Comment valided');
+				else echo '!'.T_('Error');
 				}
 			}
-		else echo '!'._('No data');
+		else echo '!'.T_('No data');
 		break;
 		// ********************************************************************************************
 		}

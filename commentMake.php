@@ -8,20 +8,20 @@ include('plugins/comment/lang/lang.php');
 $out = '<div class="commentBloc">
 	<div id="comment" class="comment"></div>
 	<div class="commentForm">
-		<h3>'._('Leave a comment').'</h3>
-		<p class="commentNote">'._('Your email address will not be published. Required fields are marked with *').'</p>
+		<h3>'.T_('Leave a comment').'</h3>
+		<p class="commentNote">'.T_('Your email address will not be published. Required fields are marked with *').'</p>
 		<p>
-			<label for="commentN">'._('Name').' *</label>
+			<label for="commentN">'.T_('Name').' *</label>
 			<input id="commentN" name="commentN" size="30" type="text"></p>
 		<p>
-			<label for="commentE">'._('Email address').' *</label>
+			<label for="commentE">'.T_('Email address').' *</label>
 			<input id="commentE" name="commentE" size="30" type="text">
 		</p>
 		<p>
-			<label for="commentT">'._('Comment').'</label>
+			<label for="commentT">'.T_('Comment').'</label>
 			<textarea id="commentT" name="commentT" cols="45" rows="8"></textarea>
 		</p>				
-		<div class="commentSubm" onClick="commentSend();">'._('Send').'</div>
+		<div class="commentSubm" onClick="commentSend();">'.T_('Send').'</div>
 		<div style="clear:both" id="commentView"></div>					
 	</div>
 </div><!-- .commentBloc -->'."\r\n";
