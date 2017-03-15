@@ -2,68 +2,104 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CmsUno\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-25 10:57+0100\n"
-"PO-Revision-Date: 2015-08-25 10:57+0100\n"
-"Last-Translator: jacques Malgrange <contacter@boiteasite.fr>\n"
+"POT-Creation-Date: 2017-03-15 18:52+0100\n"
+"PO-Revision-Date: 2017-03-15 18:52+0100\n"
+"Last-Translator: malgrange <jacques.malgrange@gmail.com>\n"
 "Language-Team: Jacques Malgrange <contacter@boiteasite.fr>\n"
-"Language: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-\tmsgstr-Bugs-To: \n"
 "Report-\t\tmsgstr-Bugs-To: \n"
-"X-Poedit-KeywordsList: _\n"
+"X-Poedit-KeywordsList: _;T_\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Country: SPAIN\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Poedit-Language: Spanish\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../support.php:19
-msgid "Support"
-msgstr "Soporte"
+#: ../../../comment.php:19 ../../../commentMake.php:21
+msgid "Comment"
+msgstr "Comentario"
 
-#: ../../../support.php:20
-msgid "This plugin creates a complete forum system. It works with the plugin 'users'. It is more targeted to online support."
-msgstr "Este plugin crea un sistema de foros completa. Se trabaja con el plugin \"users\". Es más se apunta al soporte en línea."
+#: ../../../comment.php:20
+msgid "This plugin allows visitors to add comments."
+msgstr "Este plugin permite a los visitantes añadir comentarios."
 
-#: ../../../support.php:21
+#: ../../../comment.php:21
 msgid "Just insert the code"
 msgstr "Sólo tiene que insertar el código"
 
-#: ../../../support.php:21
-msgid "in the template, in the page content or in another plugin."
-msgstr "en el template, en el contenido de la página o en otro plugin."
+#: ../../../comment.php:21
+msgid "in the template or the page content."
+msgstr "en la plantilla o en el contenido de la página."
 
-#: ../../../support.php:23
-msgid "Support List"
-msgstr "Lista de Soporte"
+#: ../../../comment.php:23
+msgid "Comments"
+msgstr "Comentarios"
 
-#: ../../../support.php:65
-#: ../../../support.php:98
+#: ../../../comment.php:59
+msgid "Comment deleted"
+msgstr "Comentario borrado"
+
+#: ../../../comment.php:60 ../../../comment.php:80
 msgid "Error"
 msgstr "Error"
 
-#: ../../../support.php:70
-#: ../../../support.php:114
-msgid "Topic deleted"
-msgstr "Tema eliminada"
-
-#: ../../../support.php:71
-#: ../../../support.php:115
-msgid "Undeletable"
-msgstr "eliminación es imposible"
-
-#: ../../../support.php:75
-#: ../../../support.php:120
+#: ../../../comment.php:63 ../../../comment.php:83
 msgid "No data"
 msgstr "Sin datos"
 
-#: ../../../supportCall.php:133
-msgid "New Topic on Support"
-msgstr "Nuevo tema en el soporte"
+#: ../../../comment.php:79
+msgid "Comment valided"
+msgstr "Comentario validado"
 
-#: ../../../supportCall.php:161
-msgid "Response on Support"
-msgstr "Respuesta en el soporte"
+#: ../../../commentCall.php:41
+msgid "You have exceeded the quota"
+msgstr "Ha superado la cuota"
 
+#: ../../../commentCall.php:60
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está esperando ser moderado."
+
+#: ../../../commentCall.php:61
+msgid "New Comment"
+msgstr "Nuevo comentario"
+
+#: ../../../commentMake.php:11
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: ../../../commentMake.php:12
+msgid "Your email address will not be published. Required fields are marked with *"
+msgstr "Su email no será publicada. Los campos obligatorios están marcados con *"
+
+#: ../../../commentMake.php:14
+msgid "Name"
+msgstr "Nombre"
+
+#: ../../../commentMake.php:17
+msgid "Email address"
+msgstr "Email"
+
+#: ../../../commentMake.php:24
+msgid "Send"
+msgstr "Enviar"
+
+#~ msgid "Support"
+#~ msgstr "Soporte"
+
+#~ msgid "This plugin creates a complete forum system. It works with the plugin 'users'. It is more targeted to online support."
+#~ msgstr "Este plugin crea un sistema de foros completa. Se trabaja con el plugin \"users\". Es más se apunta al soporte en línea."
+
+#~ msgid "Support List"
+#~ msgstr "Lista de Soporte"
+
+#~ msgid "Undeletable"
+#~ msgstr "eliminación es imposible"
+
+#~ msgid "New Topic on Support"
+#~ msgstr "Nuevo tema en el soporte"
+
+#~ msgid "Response on Support"
+#~ msgstr "Respuesta en el soporte"

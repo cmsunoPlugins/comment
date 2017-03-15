@@ -2,60 +2,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CmsUno\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-14 17:30+0100\n"
-"PO-Revision-Date: 2016-01-14 17:30+0100\n"
-"Last-Translator: jacques Malgrange <contacter@boiteasite.fr>\n"
+"POT-Creation-Date: 2017-03-15 18:45+0100\n"
+"PO-Revision-Date: 2017-03-15 18:45+0100\n"
+"Last-Translator: malgrange <jacques.malgrange@gmail.com>\n"
 "Language-Team: Jacques Malgrange <contacter@boiteasite.fr>\n"
-"Language: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-\tmsgstr-Bugs-To: \n"
 "Report-\t\tmsgstr-Bugs-To: \n"
-"X-Poedit-KeywordsList: _\n"
+"X-Poedit-KeywordsList: _;T_\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Country: FRANCE\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Poedit-Language: French\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../commentCall.php:41
-msgid "You have exceeded the quota"
-msgstr "Vous avez dépassé le quota"
-
-#: ../../../commentCall.php:60
-msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en attente de modération."
-
-#: ../../../commentCall.php:61
-#: ../../../commentCall.php:76
-msgid "New Comment"
-msgstr "Nouveau commentaire"
-
-#: ../../../commentMake.php:11
-msgid "Leave a comment"
-msgstr "Laisser un commentaire"
-
-#: ../../../commentMake.php:12
-msgid "Your email address will not be published. Required fields are marked with *"
-msgstr "Votre adresse email ne sera pas publiée. Les champs obligatoires sont marqués avec *"
-
-#: ../../../commentMake.php:14
-msgid "Name"
-msgstr "Nom"
-
-#: ../../../commentMake.php:17
-msgid "Email address"
-msgstr "Adresse email"
-
-#: ../../../commentMake.php:21
-#: ../../../comment.php:19
+#: ../../../comment.php:19 ../../../commentMake.php:21
 msgid "Comment"
 msgstr "Commentaire"
-
-#: ../../../commentMake.php:24
-msgid "Send"
-msgstr "Envoyer"
 
 #: ../../../comment.php:20
 msgid "This plugin allows visitors to add comments."
@@ -77,19 +42,52 @@ msgstr "Commentaires"
 msgid "Comment deleted"
 msgstr "Commentaire supprimé"
 
-#: ../../../comment.php:60
-#: ../../../comment.php:80
+#: ../../../comment.php:60 ../../../comment.php:80
 msgid "Error"
 msgstr "Erreur"
 
-#: ../../../comment.php:63
-#: ../../../comment.php:83
+#: ../../../comment.php:63 ../../../comment.php:83
 msgid "No data"
 msgstr "Pas de données"
 
 #: ../../../comment.php:79
 msgid "Comment valided"
 msgstr "commentaire validé"
+
+#: ../../../commentCall.php:41
+msgid "You have exceeded the quota"
+msgstr "Vous avez dépassé le quota"
+
+#: ../../../commentCall.php:60
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../../../commentCall.php:61
+msgid "New Comment"
+msgstr "Nouveau commentaire"
+
+#: ../../../commentMake.php:11
+msgid "Leave a comment"
+msgstr "Laisser un commentaire"
+
+#: ../../../commentMake.php:12
+msgid ""
+"Your email address will not be published. Required fields are marked with *"
+msgstr ""
+"Votre adresse email ne sera pas publiée. Les champs obligatoires sont "
+"marqués avec *"
+
+#: ../../../commentMake.php:14
+msgid "Name"
+msgstr "Nom"
+
+#: ../../../commentMake.php:17
+msgid "Email address"
+msgstr "Adresse email"
+
+#: ../../../commentMake.php:24
+msgid "Send"
+msgstr "Envoyer"
 
 #~ msgid "Support"
 #~ msgstr "Support"

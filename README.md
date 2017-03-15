@@ -29,5 +29,6 @@ This plugin allows visitors to add comments in the page.
 
 ### Versions ###
 
+* 1.1.1 - 15/03/2017 : Fix issue when unknow lang
 * 1.1 - 14/10/2016 : Use PHP-Gettext in place of gettext
 * 1.0 - 14/01/2016 : First stable version
