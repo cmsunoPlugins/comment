@@ -4,7 +4,7 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQU
 <?php
 include('../../config.php');
 include('lang/lang.php');
-if (isset($_POST['a']))
+if(isset($_POST['a']))
 	{
 	switch(strip_tags($_POST['a']))
 		{
@@ -71,32 +71,51 @@ function mailAdmin($tit, $body, $Ubusy, $bottom, $top, $sdata)
 	$bottom = str_replace('[[unsubscribe]]','&nbsp;',$bottom);
 	$q = file_get_contents('../../data/'.$Ubusy.'/site.json'); $a = json_decode($q,true);
 	$q = file_get_contents('../../data/_sdata-'.$sdata.'/ssite.json'); $b = json_decode($q,true);
-	$rn = "\r\n";
-	$boundary = "-----=".md5(rand());
 	$body = "<b>".$tit."</b><br />".$rn.$body.$rn;
 	$msgT = strip_tags($body);
 	$msgH = $top . $body . $bottom;
-	$sujet = $a['tit'].' - '. $tit;
+	$subject = $a['tit'].' - '. $tit;
 	$fm = preg_replace("/[^a-zA-Z ]+/", "", $a['tit']);
-	$header  = "From: ".$fm."<".$b['mel'].">".$rn."Reply-To:".$fm."<".$b['mel'].">";
-	$header.= "MIME-Version: 1.0".$rn;
-	$header.= "Content-Type: multipart/alternative;".$rn." boundary=\"$boundary\"".$rn;
-	$msg= $rn."--".$boundary.$rn;
-	$msg.= "Content-Type: text/plain; charset=\"utf-8\"".$rn;
-	$msg.= "Content-Transfer-Encoding: 8bit".$rn;
-	$msg.= $rn.$msgT.$rn;
-	$msg.= $rn."--".$boundary.$rn;
-	$msg.= "Content-Type: text/html; charset=\"utf-8\"".$rn;
-	$msg.= "Content-Transfer-Encoding: 8bit".$rn;
-	$msg.= $rn.$msgH.$rn;
-	$msg.= $rn."--".$boundary."--".$rn;
-	$msg.= $rn."--".$boundary."--".$rn;
-	if(mail($b['mel'], stripslashes($tit), stripslashes($msg), $header)) return true;
-	else return false;
+	if(file_exists(dirname(__FILE__).'/../newsletter/PHPMailer/PHPMailerAutoload.php'))
+		{
+		// PHPMailer
+		require_once(dirname(__FILE__).'/../newsletter/PHPMailer/PHPMailerAutoload.php');
+		$phm = new PHPMailer();
+		$phm->charSet = "UTF-8";
+		$phm->setFrom($b['mel'], $fm);
+		$phm->addReplyTo($b['mel'], $fm);
+		$phm->addAddress($b['mel'], $fm);
+		$phm->isHTML(true);
+		$phm->subject = stripslashes($subject);
+		$phm->body = stripslashes($msgH);		
+		$phm->altBody = stripslashes($msgT);
+		if($phm->send()) return true;
+		else return false;
+		}
+	else
+		{
+		$rn = "\r\n";
+		$boundary = "-----=".md5(rand());
+		$header  = "From: ".$fm."<".$b['mel'].">".$rn."Reply-To:".$fm."<".$b['mel'].">";
+		$header.= "MIME-Version: 1.0".$rn;
+		$header.= "Content-Type: multipart/alternative;".$rn." boundary=\"$boundary\"".$rn;
+		$msg= $rn."--".$boundary.$rn;
+		$msg.= "Content-Type: text/plain; charset=\"utf-8\"".$rn;
+		$msg.= "Content-Transfer-Encoding: 8bit".$rn;
+		$msg.= $rn.$msgT.$rn;
+		$msg.= $rn."--".$boundary.$rn;
+		$msg.= "Content-Type: text/html; charset=\"utf-8\"".$rn;
+		$msg.= "Content-Transfer-Encoding: 8bit".$rn;
+		$msg.= $rn.$msgH.$rn;
+		$msg.= $rn."--".$boundary."--".$rn;
+		$msg.= $rn."--".$boundary."--".$rn;
+		if(mail($b['mel'], stripslashes($tit), stripslashes($msg), $header)) return true;
+		else return false;
+		}
 	}
 function getGravatar($email,$s=80,$d='404',$r='g')
 	{
-	$u = 'http://www.gravatar.com/avatar/' . md5(strtolower(trim($email))) . '?s='.$s.'&d='.$d.'&r='.$r;
+	$u = 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($email))) . '?s='.$s.'&d='.$d.'&r='.$r;
 	$e = @fopen($u,"r");
 	if($e) return str_replace('d=404&','d=mm&',$u);
 	else return false;
