@@ -40,17 +40,19 @@ function commentSend(){
 	if(a.test(e)&&n!=''&&t!='')x.send(p);
 }
 function commentView(f){
-	var i,k,o='<ul>';
-	for(i=0;i<f.length;i++){
-		if(f[i]['s']==3){
-			o+='<li><div id="comment'+i+'">';
-			o+='<div class="commentAuthor"><img alt="" src="'+(f[i]['g']?f[i]['g']:'uno/plugins/comment/img/noPhoto.png')+'" width="80" height="80"><span>'+f[i]['n']+'</span> - <time>'+commentDate(f[i]['d'])+'</time></div>';
-			o+='<div class="commentText"><div>'+f[i]['t']+'</div></div>';
-			o+='</div></li>';
+	var i,k,o='<ul>',d=document.getElementById('comment');
+	if(d!==null){
+		for(i=0;i<f.length;i++){
+			if(f[i]['s']==3){
+				o+='<li><div id="comment'+i+'">';
+				o+='<div class="commentAuthor"><img alt="" src="'+(f[i]['g']?f[i]['g']:'uno/plugins/comment/img/noPhoto.png')+'" width="80" height="80"><span>'+f[i]['n']+'</span> - <time>'+commentDate(f[i]['d'])+'</time></div>';
+				o+='<div class="commentText"><div>'+f[i]['t']+'</div></div>';
+				o+='</div></li>';
+			}
 		}
+		o+='</ul>';
+		d.innerHTML=o;
 	}
-	o+='</ul>';
-	document.getElementById('comment').innerHTML=o;
 }
 function commentDate(f){
 	var d=new Date(f*1000),j,m,a;
