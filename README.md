@@ -29,7 +29,8 @@ This plugin allows visitors to add comments in the page.
 
 ### Versions ###
 
-* 1.1.3 -14/11/2017 : Fix JS error
+* 1.1.4 - 27/09/2022 : Responsive display
+* 1.1.3 - 14/11/2017 : Fix JS error
 * 1.1.2 - 20/03/2017 : Use PHPMailer if Newsletter plugin exists - Gravatar url in HTTPS
 * 1.1.1 - 15/03/2017 : Fix issue when unknow lang
 * 1.1 - 14/10/2016 : Use PHP-Gettext in place of gettext

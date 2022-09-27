@@ -6,3 +6,8 @@
 #commentL td .view{text-align:center;font-weight:700;font-size:1.2em;color:green;cursor:pointer;line-height:1.5em;}
 #commentL td .mel{text-align:center;font-size:1.2em;color:red;line-height:1.5em;}
 #commentL td .melOk{text-align:center;font-size:1.2em;color:green;line-height:1.5em;}
+@media screen and (max-width:780px){
+	#commentL tr{display:block;margin-bottom:10px;}
+	#commentL td:nth-child(1){display:block;text-align:left;font-style:italic;width:100%;}
+	#commentL td:nth-child(2){max-width:50%;}
+}
